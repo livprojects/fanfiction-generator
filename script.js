@@ -39,6 +39,7 @@ const app = {
         console.log(fourthdialogue.value);
 
         const mainResult = document.getElementById("main-result");
+        mainResult.innerHTML = '';
 
         const chapter1 = document.createElement('div');
         chapter1.setAttribute("id", "chapter1");
@@ -48,6 +49,7 @@ const app = {
 
         // Chapter 1 creation // 
 
+
         chapter1.innerHTML = '<h3> Chapitre 1 </h3> <br> <br> <p> Heeey ! J’ai 16 ans et je m’appelle ' + firstname.value + " " + secondname.value + " " + thirdname.value + ' mais tous mes amis m’appellent ' + nickname.value +". Je suis gentille, généreuse, très intelligente mais j’ai aussi des défauts, je suis "+ flaw.value +"  lol ^^ ! <br> Physiquement, j’ai des beaux cheveux " + color.value + " et de grands yeux " + eyes.value +". Je me mordille les lèvres lorsque je suis nerveuse, ce qui leur donne une teinte rouge cerise très séduisante, et qui contraste joliment avec ma peau " + white.value +". Pourtant, je ne me maquille jamais, ou alors un peu de mascara en soirée pour donner du volume à mes cils déjà incroyablement longs. Oui je sais, je ne suis pas comme les autres filles qui se soucient des vêtements, du maquillage et des garçons… <br>Au contraire, moi "+ passion.value +" et les gens me prennent pour une folle ><’. Côté style, je suis plutôt simple et je m’habille avec des vêtements confortables. J’ai tendance à cacher mon ventre plat et ma poitrine généreuse sous des chemises amples car je n’aime pas attirer l’intention sur moi… <br>A l’école, je n’ai pas beaucoup d’amis, à part Camille, mon "+friend.value+" qui est un peu comme ma sœur mais qui n’apparaitra presque jamais dans cette histoire car iel est là pour les quotas. Néanmoins, on se raconte tout, et c’est d’ailleurs la seule personne à connaitre mon lourd passé : "+past.value+". <br>Aujourd’hui, c’est mon premier jour au lycée George Pompidou de Chicago… Et oui, je viens de déménager, et je vais être la petite nouvelle de service ! Moi qui déteste me faire remarquer, c’est bien ma veine --‘ <br> 60 com’s et je poste le prochain chapitre X3…</p><br><br><div class='main-result-chapters-links'><p>Ajouter un commentaire</p><p>|</p><p>Voir les commentaires (2)</p></div>";
     
         
@@ -55,6 +57,7 @@ const app = {
         chapter6.setAttribute("id", "chapter6");
         mainResult.appendChild(chapter6);
         // Chapter 6 creation // 
+
 
         chapter6.innerHTML = "<h3> Chapitre 6 </h3> <br> <br> <p> Le soir, dans mon lit, je regarde par la fenêtre la pluie couler, la musique dans mes oreilles, en me mordant les lèvres et passant la main dans mes cheveux. Comme je ne suis pas comme les autres filles de mon âge, je passe des heures à réfléchir à des questions existentielles, comme par exemple : " + hottopic.value + ".<br> Tout à coup, je repense à ma drôle de rencontre avec " + guyname.value + " ce matin. Je rougis en me remémorant ce moment où " + firstencounter.value + ". Quand il a relevé la tête, et que nos regards se sont croisés, j’ai senti mon cœur faire des loopings… <br> J’entends encore ses mots résonner dans ma tête : <br> Lui : "+ firstdialogue.value + " " + seconddialogue.value + "<br> Moi : " + thirddialogue.value + " " + fourthdialogue.value +"<br> Est-ce donc ça qu’on appelle l’amour ? Je secoue la tête : mais non enfin " + firstname.value + " " + secondname.value + " " + thirdname.value + ", ne sois pas idiote ! L’amour c’est un truc pour les autres filles, qui passent leur temps à parler de garçons et de shopping… <br> Moi, je ne suis pas comme elles, je suis " + asset.value +". Pourtant, je ne peux m’empêcher d’être fascinée par "+ fascination.value +" : il a l’air si mystérieux ! Qu’est-ce qu’il pourrait bien me trouver à moi, l’intello de service, avec personnalité atypique et mon corps qui correspond à tous les standards de beauté ? –‘ <br> Il faut vraiment que j’arrête de me faire des films, jamais " + guyname.value +" n’acceptera de " + date.value + "<br>A moins que ? <br> <br> A suivre….</p><br><br><div class='main-result-chapters-links'><p>Ajouter un commentaire</p><p>|</p><p>Voir les commentaires (2)</p></div>";
         
