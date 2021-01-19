@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Yusei+Magic&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="./favicon.png" />
     <title>Générateur de fanfiction</title>
@@ -12,7 +16,7 @@
 <body>
     <main>
         <h1>Générateur de fanfiction</h1>
-        <h2>Skyblog edition</h2>
+        <h2 class="flip-2-hor-bottom-2">Skyblog édition</h2>
 
         <p class="main-intro">Tu as toujours rêvé que ton skyblog connaisse la gloire et le succès ? De dépasser la
             barre des 5000 coms ? De te faire un nom dans le milieu de la fiction ? Ce générateur de fic’ est fait pour
@@ -22,20 +26,24 @@
         <div class="main-form-block">
 
             <!-- Questions de description personnage  -->
-            <p class="main-form-intro">D’abord, réponds à ces quelques questions personnelles pour bien cerner tes goûts
-                :</p>
-            <form action="" class="main-form-form" method="get">
+
+            <form id="main-form" action="" class="main-form-form" method="get">
+                <p class="main-form-inter">D’abord, réponds à ces quelques questions personnelles pour bien cerner tes goûts
+                    :</p>
                 <label for="firstname">Ton personnage historique préféré:</label>
                 <select id="firstname" name="firstname">
                     <option value="Vénus">Vénus</option>
                     <option value="Médusa">Médusa</option>
                     <option value="Pocahontas">Pocahontas</option>
                     <option value="Cléopatra">Cléopatra</option>
+                    <option value="Sissy">Sissy</option>
+
                 </select>
 
                 <label for="secondname">Ta pierre totem:</label>
                 <select id="secondname" name="secondname">
                     <option value="Emeraude">Emeraude</option>
+                    <option value="Ruby">Ruby</option>
                     <option value="Saphir">Saphir</option>
                     <option value="Crystal">Crystal</option>
                     <option value="Pearl">Pearl</option>
@@ -50,7 +58,7 @@
                     <option value="aussi blanche qu'un casting de film français">aussi blanche qu'un casting de film français</option>
                 </select>
 
-                <p class="main-form-characters">Toute bonne histoire commence par de bons personnages principaux.</p>
+                <p class="main-form-inter">Toute bonne histoire commence par de bons personnages principaux.</p>
 
                 <!-- Questions personnages principaux  -->
 
@@ -60,7 +68,7 @@
                     <option value="Shadow">Shadow</option>
                     <option value="Tenebra">Tenebra</option>
                     <option value="Sakura">Sakura</option>
-                    <option value="Princessa">Princesa</option>
+                    <option value="Princesa">Princesa</option>
                 </select>
 
                 <label for="nickname">Mais tout le monde l’appellera :</label>
@@ -74,11 +82,21 @@
 
                 <label for="color">Ses cheveux seront :</label>
                 <select id="color" name="color">
-                    <option value="couleur latte macchiato chocolate chip">couleur latte macchiato chocolate chip</option>
-                    <option value="d'un blond lumineux, qui rappelle les champs de blé en été avec des reflets de plaines du Grand Ouest">d'un blond lumineux, qui rappelle les champs de blé en été avec des reflets de plaines du Grand Ouest</option>
+                    <option value="couleur latte macchiato chocolate chip">couleur latte macchiato chocolate chip
+                    </option>
+                    <option
+                        value="d'un blond lumineux, qui rappelle les champs de blé en été avec des reflets de plaines du Grand Ouest">
+                        d'un blond lumineux, qui rappelle les champs de blé en été avec des reflets de plaines du Grand
+                        Ouest</option>
                     <option value="noirs comme les ténèbres de l'enfer">noirs comme les ténèbres de l'enfer</option>
-                    <option value="d’une brillance miroir presque aveuglante qui contribue à 67% de la pollution lumineuse en ville">d’une brillance miroir presque aveuglante qui contribue à 67% de la pollution lumineuse en ville</option>
-                    <option value="si longs qu’ils m’arrivent aux chevilles et que je trébuche fréquemment dessus, c’est bien ma veine">si longs qu’ils m’arrivent aux chevilles et que je trébuche fréquemment dessus, c’est bien ma veine</option>
+                    <option
+                        value="d’une brillance miroir presque aveuglante qui contribue à 67% de la pollution lumineuse en ville">
+                        d’une brillance miroir presque aveuglante qui contribue à 67% de la pollution lumineuse en ville
+                    </option>
+                    <option
+                        value="si longs qu’ils m’arrivent aux chevilles et que je trébuche fréquemment dessus, c’est bien ma veine">
+                        si longs qu’ils m’arrivent aux chevilles et que je trébuche fréquemment dessus, c’est bien ma
+                        veine</option>
                 </select>
 
 
@@ -86,153 +104,204 @@
 
                 <label for="eyes">Ses yeux seront :</label>
                 <select id="eyes" name="eyes">
-                  <option value="violets, scintillant comme une améthyste qui semble pénétrer votre âme">violets, scintillant comme une améthyste qui semble pénétrer votre âme</option>
-                  <option value="bleus couleur piscine, avec beaucoup, beaucoup de chlore mais dans lequel il est si tentant de plonger">bleus couleur piscine, avec beaucoup, beaucoup de chlore mais dans lequel il est si tentant de plonger</option>
-                  <option value="d’un vert émeraude, avec des reflets noisette, des pointes de gris et qui virent au bleu lorsque je suis triste et noir encre quand je suis énervée">d’un vert émeraude, avec des reflets noisette, des pointes de gris et qui virent au bleu lorsque je suis triste et noir encre quand je suis énervée</option>
-                  <option value="gris acier métallisé avec les jantes en alliage qui vous éclairent comme des phares de voiture dans l’obscurité">gris acier métallisé avec les jantes en alliage qui vous éclairent comme des phares de voiture dans l’obscurité</option>
-                  <option value="comme un manga, ce qui me donne un air délicieusement faussement ethnique alors ne venez pas m’emmerder avec le manque de diversité des personnages de cette histoire, compris ?">comme un manga, ce qui me donne un air délicieusement faussement ethnique alors ne venez pas m’emmerder avec le manque de diversité des personnages de cette histoire, compris ?</option>
-                </select>
-
-                
-Sa principale qualité sera d’être : 
-(ATOUT)
-incroyablement mature pour mon âge
-intelligente, moi
-capable d’aligner deux mots 
-l’inventrice de la classification des atomes 
-obligée de masquer mon peu d’intelligence par des silences mystérieux et répétés
-
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
-                </select>
-
-                
-Et son défaut, sera d’être :
-(DEFAUT)
-une vraie geekette 
-irrépressiblement attirée par les red flags qu’agitent devant mon nez mes crushs successifs
-un loup garou les soirs de pleine lune
-écrite avec le cul
-encore ignorante du fait qu’il n’y a pas de commerce éthique sous le capitalisme
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
-                </select>
-
-                Sa passion ultime sera :
-(PASSION)
-j’ai toujours le nez dans des gros bouquins poussiéreux
-j’écoute des vieux groupe de rock sur des vinyles
-je chante si bien que les oiseaux se taisent pour m’écouter
-je gagne fréquemment des prix nobel de littérature 
-je passe mon temps libre à aider des enfants africains dans des orphelinats
-
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
+                    <option value="violets, scintillant comme une améthyste qui semble pénétrer votre âme">violets, scintillant comme une améthyste qui semble pénétrer votre âme</option>
+                    <option
+                        value="bleus couleur piscine, avec beaucoup, beaucoup de chlore mais dans lequel il est si tentant de plonger">
+                        bleus couleur piscine, avec beaucoup, beaucoup de chlore mais dans lequel il est si tentant de plonger</option>
+                    <option
+                        value="d’un vert émeraude, avec des reflets noisette, des pointes de gris et qui virent au bleu lorsque je suis triste et noir encre quand je suis énervée">
+                        d’un vert émeraude, avec des reflets noisette, des pointes de gris et qui virent au bleu lorsque je suis triste et noir encre quand je suis énervée</option>
+                    <option
+                        value="gris acier métallisé avec les jantes en alliage qui vous éclairent comme des phares de voiture dans l’obscurité">
+                        gris acier métallisé avec les jantes en alliage qui vous éclairent comme des phares de voiture dans l’obscurité</option>
+                    <option
+                        value="comme un manga, ce qui me donne un air délicieusement faussement ethnique alors ne venez pas m’emmerder avec le manque de diversité des personnages de cette histoire, compris ?">
+                        comme un manga, ce qui me donne un air délicieusement faussement ethnique alors ne venez pas m’emmerder avec le manque de diversité des personnages de cette histoire, compris ?</option>
                 </select>
 
 
-                Et son plus grand secret sera :
-                (PASSE)
-                je suis l’unique héritière d’une immense fortune et j’habite seule avec ma gouvernante dans une immense maison avec piscine, salle de billard et 7 salles de bain
-                je ne suis jamais sortie avec un garçon, trop la honte
-                je suis la fille cachée d’Harry Potter et de Lord Voldemort
-                c’était moi qui ai imprimé mes fesses sur la photocopieuse du CDI l’année dernière
-                j’ai une bonne dose de mysogynie intériorisée dont je ne parviens pas à me rendre compte.
-                
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
+                <label for="asset">Sa principale qualité sera d’être :</label>
+                <select id="asset" name="asset">
+                    <option value="incroyablement mature pour mon âge">incroyablement mature pour mon âge</option>
+                    <option value="intelligente, moi">intelligente, moi</option>
+                    <option value="capable d’aligner deux mots">capable d’aligner deux mots</option>
+                    <option value="l’inventrice de la classification des atomes">l’inventrice de la classification des atomes</option>
+                    <option value="obligée de masquer mon peu d’intelligence par des silences mystérieux et répétés">obligée de masquer mon peu d’intelligence par des silences mystérieux et répétés</option>
                 </select>
 
-                
-L’acolyte de ton héroïne sera son :
-(AMI)
-meilleur ami gay
-amie gothique
-amie noire, musulmane et en fauteuil
-amie sourde et muette
-amie imaginaire 
-
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
+                <label for="flaw"> Et son défaut, sera d’être :</label>
+                <select id="flaw" name="flaw">
+                    <option value="une vraie geekette">une vraie geekette</option>
+                    <option
+                        value="irrépressiblement attirée par les red flags qu’agitent devant mon nez mes crushs successifs">
+                        irrépressiblement attirée par les red flags qu’agitent devant mon nez mes crushs successifs
+                    </option>
+                    <option value="un loup-garou les soirs de pleine lune">un loup-garou les soirs de pleine lune
+                    </option>
+                    <option value="écrite avec le cul">écrite avec le cul</option>
+                    <option value="encore ignorante du fait qu’il n’y a pas de commerce éthique sous le capitalisme">
+                        encore ignorante du fait qu’il n’y a pas de commerce éthique sous le capitalisme</option>
                 </select>
 
-                Son crush s’appellera :
-(NOM MEC)
-Ryan Urie
-Lucius Potter
-Jacob Cullen
-Zyane Styles
-Sky Izelymit
-
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
+                <label for="passion">Sa passion ultime sera :</label>
+                <select id="passion" name="passion">
+                    <option value="j’ai toujours le nez dans des gros bouquins poussiéreux">j’ai toujours le nez dans
+                        des gros bouquins poussiéreux</option>
+                    <option value="j’écoute des vieux groupes de rock sur des vinyles">j’écoute des vieux groupes de rock
+                        sur des vinyles</option>
+                    <option value="je chante si bien que les oiseaux se taisent pour m’écouter">je chante si bien que
+                        les oiseaux se taisent pour m’écouter</option>
+                    <option value="je gagne fréquemment des prix Nobel de littérature">je gagne fréquemment des prix
+                        Nobel de littérature</option>
+                    <option value="je passe mon temps libre à aider des enfants africains dans des orphelinats">je passe
+                        mon temps libre à aider des enfants africains dans des orphelinats</option>
                 </select>
 
-                Et sera caractérisé par :
-(FASCINATION)
-sa capuche cachant sa visière de casquette, cachant ses mèches de cheveux, cachant ses yeux, cachant le miroir de son âme
-sa manie de rentrer par effraction dans ma chambre tous les deux jours et de toujours apparaitre dans n’importe quel endroit où je me rends
-son absence totale d’empathie, d’émotions ou d’intérêt pour le monde qui l’entoure
-son régime alimentaire constitué principalement de sang humain
-sa carrière internationale de grand chanteur dans un boys band, qu’il mène en parallèle de ses études dans le lycée George Pompidou de Chicago
-
-
-                <label for="white">Si tu devais décrire la couleur de cette page, tu dirais plutôt qu’elle est :</label>
-                <select id="white" name="white">
-                  <option value="blanche comme neige">blanche comme neige</option>
-                  <option value="d'une pâleur vampirique">d'une pâleur vampirique</option>
-                  <option value="ivoire avec des reflets irisés">ivoire avec des reflets irisés</option>
-                  <option value="de porcelaine">de porcelaine</option>
-                  <option value="de porcelaine">aussi blanche qu'un casting de film français</option>
+                <label for="past">Et son plus grand secret sera :</label>
+                <select id="past" name="past">
+                    <option value="je suis l’unique héritière d’une immense fortune et j’habite seule avec ma gouvernante dans une immense
+                    maison avec piscine, salle de billard et 7 salles de bain">je suis l’unique héritière d’une immense
+                        fortune et j’habite seule avec ma gouvernante dans une immense
+                        maison avec piscine, salle de billard et 7 salles de bain</option>
+                    <option value="je ne suis jamais sortie avec un garçon, trop la honte">je ne suis jamais sortie avec
+                        un garçon, trop la honte</option>
+                    <option value="je suis la fille cachée d’Harry Potter et de Lord Voldemort">je suis la fille cachée
+                        d’Harry Potter et de Lord Voldemort</option>
+                    <option value="c’était moi qui ai imprimé mes fesses sur la photocopieuse du CDI l’année dernière">
+                        c’était moi qui ai imprimé mes fesses sur la photocopieuse du CDI l’année dernière</option>
+                    <option
+                        value="j’ai une bonne dose de mysogynie intériorisée dont je ne parviens pas à me rendre compte">
+                        j’ai une bonne dose de mysogynie intériorisée dont je ne parviens pas à me rendre compte
+                    </option>
                 </select>
 
+                <label for="friend">L’acolyte de ton héroïne sera son :</label>
+                <select id="friend" name="friend">
+                    <option value="meilleur ami gay">meilleur ami gay</option>
+                    <option value="amie gothique">amie gothique</option>
+                    <option value="amie noire, musulmane et en fauteuil">amie noire, musulmane et en fauteuil</option>
+                    <option value="amie sourde et muette">amie sourde et muette</option>
+                    <option value="amie imaginaire">amie imaginaire</option>
+                </select>
+
+                <label for="guyname">Son crush s’appellera :</label>
+                <select id="guyname" name="guyname">
+                    <option value="Ryan Urie">Ryan Urie</option>
+                    <option value="Lucius Potter">Lucius Potter</option>
+                    <option value="Jacob Cullen">Jacob Cullen</option>
+                    <option value="Zyane Styles">Zyane Styles</option>
+                    <option value="Sky Izelymit">Sky Izelymit</option>
+                </select>
+
+
+                <label for="fascination">Et sera caractérisé par :</label>
+                <select id="fascination" name="fascination">
+                    <option
+                        value="sa capuche cachant sa visière de casquette, cachant ses mèches de cheveux, cachant ses yeux, cachant le miroir de son âme">
+                        sa capuche cachant sa visière de casquette, cachant ses mèches de cheveux, cachant ses yeux,
+                        cachant le miroir de son âme</option>
+                    <option
+                        value="sa manie de rentrer par effraction dans ma chambre tous les deux jours et de toujours apparaitre dans n’importe quel endroit où je me rends">
+                        sa manie de rentrer par effraction dans ma chambre tous les deux jours et de toujours apparaitre
+                        dans n’importe quel endroit où je me rends</option>
+                    <option value="son absence totale d’empathie, d’émotions ou d’intérêt pour le monde qui l’entoure">
+                        son absence totale d’empathie, d’émotions ou d’intérêt pour le monde qui l’entoure</option>
+                    <option value="son régime alimentaire constitué principalement de sang humain">son régime
+                        alimentaire constitué principalement de sang humain</option>
+                    <option
+                        value="sa carrière internationale de grand chanteur dans un boys band, qu’il mène en parallèle de ses études dans le lycée Georges Pompidou de Chicago">
+                        sa carrière internationale de grand chanteur dans un boys band, qu’il mène en parallèle de ses
+                        études dans le lycée Georges Pompidou de Chicago</option>
+                </select>
+
+                <p class="main-form-inter">Une bonne fiction, c’est aussi un bon scénario et des rebondissements
+                    que personne n’avait vu venir.</p>
+
+                <!-- Questions déroulé de l'histoire  -->
+
+
+                <label for="firstencounter">L’action, bien ficelée, mettra en scène une rencontre amoureuse des plus romantiques :</label>
+                <select id="firstencounter" name="firstencounter">
+                    <option value="je lui ai foncé dedans par accident en lui renversant mon verre de Frappuccino Vanille Pêche Melba dessus">je lui ai foncé dedans par accident en lui renversant mon verre de Frappuccino Vanille Pêche Melba dessus</option>
+                    <option value="je me suis assise à côté de lui en cours de chimie">je me suis assise à côté de lui en cours de chimie</option>
+                    <option value="il m’a aidée à me relever après que je sois tombée par terre">il m’a aidée à me relever après que je sois tombée par terre</option>
+                    <option value="j’ai surpris accidentellement sa dispute avec sa copine Britney, la pompom girl la plus populaire du lycée qui ne le mérite pas">j’ai surpris accidentellement sa dispute avec sa copine Britney, la pompom girl la plus populaire du lycée qui ne le mérite pas</option>
+                    <option value="je l’ai surpris à me suivre jusqu’à chez moi parce qu’il est protecteur x3">je l’ai surpris à me suivre jusqu’à chez moi parce qu’il est protecteur x3</option>
+                </select>
+
+                <!-- Dialogues -->
+
+                <p class="main-form-inter">Et des dialogues dont la plume lyrique sublime la poésie de cette histoire naissante : </p>
+
+                <label for="firstdialogue">Lui :</label>
+                <select id="firstdialogue" name="firstdialogue">
+                    <option value="J’ai l’impression que tu m’évites">J’ai l’impression que tu m’évites</option>
+                    <option value="Tu es ma dose d’héroïne">Tu es ma dose d’héroïne</option>
+                    <option value="Tu as un bout de salade entre les dents">Tu as un bout de salade entre les dents</option>
+                    <option value="Pardon de ne pas avoir répondu à ton message mais je n’avais plus de forfait,">Je collecte les cheveux que tu perds et les garde dans une boîte</option>
+                    <option value="N’oublie pas de bien claquer la porte en sortant">N’oublie pas de bien claquer la porte en sortant</option>
+                </select>
+
+                <label for="seconddialogue">Deuxième round :</label>
+                <select id="seconddialogue" name="seconddialogue">
+                    <option value="malheureusement je ne suis pas bon pour toi.">malheureusement je ne suis pas bon pour toi.</option>
+                    <option value="et j'ai écrit une chanson pour aborder ce sujet">et j'ai écrit une chanson pour aborder ce sujet</option>
+                    <option value="car mes mains dégoulinent de transpiration, c’est dégueulasse.">car mes mains dégoulinent de transpiration, c’est dégueulasse.</option>
+                    <option value="et tu dois me promettre de ne rien dire à personne.">et tu dois me promettre de ne rien dire à personne.</option>
+                    <option value="mais néanmoins nous ne nous effleurons pas les mains avant le chapitre 13, car je suis profondément mormon.">mais néanmoins nous ne nous effleurons pas les mains avant le chapitre 13, car je suis profondément mormon.</option>
+                </select>
+
+                <label for="thirddialogue">Elle :</label>
+                <select id="thirddialogue" name="thirddialogue">
+                    <option value="C’est la plus belle chose qu’on m’ait jamais dite">C’est la plus belle chose qu’on m’ait jamais dite</option>
+                    <option value="Tu es ma force et ma faiblesse">Tu es ma force et ma faiblesse</option>
+                    <option value="Les garçons sont tous les mêmes,">Les garçons sont tous les mêmes,</option>
+                    <option value="Pardon de ne pas avoir répondu à ton message mais je n’avais plus de forfait,">Pardon de ne pas avoir répondu à ton message mais je n’avais plus de forfait,</option>
+                    <option value="J’aime écouter la pluie tomber">J’aime écouter la pluie tomber</option>
+                </select>
+
+                <label for="fourthdialogue">Deuxième round :</label>
+                <select id="fourthdialogue" name="fourthdialogue">
+                    <option value="cependant je vais rester ici sans bouger en espérant que tu aies une vision en mouvement.">cependant je vais rester ici sans bouger en espérant que tu aies une vision en mouvement.</option>
+                    <option value="mais que dira t-on du quand dira-ton ?">mais que dira-t-on du quand dira-t-on ?</option>
+                    <option value="si tu es d’accord, lâche un comz’">si tu es d’accord, lâche un comz’</option>
+                    <option value="et cela m’émeut aux larmes">et cela m’émeut aux larmes.</option>
+                    <option value="cela me rappelle me rappelle que je ne suis pas comme toutes les autres filles">cela me rappelle me rappelle que je ne suis pas comme toutes les autres filles.</option>
+                </select>
+
+                <label for="date">Ils devront ensemble braver tous les obstacles avant de :</label>
+                <select id="date" name="date">
+                    <option value="m’inviter au bal de fin d’année">m’inviter au bal de fin d’année</option>
+                    <option value="me laisser lui tenir la main avant le mariage">me laisser lui tenir la main avant le mariage</option>
+                    <option value="me transformer en vampire">me transformer en vampire</option>
+                    <option value="lever l’injonction d’éloignement qu’il a demandée contre moi">lever l’injonction d’éloignement qu’il a demandée contre moi</option>
+                    <option value="me filer ses codes Netflix">me filer ses codes Netflix</option>
+                </select>
+
+                <label for="hottopic">Et enfin, ta fiction vise à aborder sans détours un sujet d’actualité brûlant :</label>
+                <select id="hottopic" name="hottopic">
+                    <option value="Et si l'amour, c'était d'aimer ?">Et si l'amour, c'était d'aimer ?</option>
+                    <option value="Qui y’a-t-il vraiment dans ce vaccin ?">Qui y’a-t-il vraiment dans ce vaccin ?</option>
+                    <option value="Est-ce que ça ne ferait pas une super photo de profil si quelqu’un me photographiait dans cette position, avec mon air méditatif et mélancolique ?">Est-ce que ça ne ferait pas une super photo de profil si quelqu’un me photographiait dans cette position, avec mon air méditatif et mélancolique ?</option>
+                    <option value="L’œuf ou la poule ?">L’œuf ou la poule ?</option>
+                    <option value="Où ai-je égaré mes clés ?">Où ai-je égaré mes clés ?</option>
+                </select>
 
 
                 <div class="main-form-form-confirm">
-                    <input type="submit" value="Rends-moi célèbre !">
+                    <button type="submit" id="form-submit">Rends-moi célèbre !</button> 
                 </div>
-
             </form>
 
         </div>
+
+        <div class="main-result" id="main-result">
+        </div>
+
+        <footer>Réalisé par Gaby & Liv - Tous droits réservés</footer>
     </main>
-    <footer>Réalisé par Gaby & Liv - Tous droits réservés</footer>
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>
