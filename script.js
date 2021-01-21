@@ -35,8 +35,6 @@ const app = {
         const date = document.getElementById('date');
         const hottopic = document.getElementById('hottopic');
         const asset = document.getElementById('asset');
-        console.log(thirddialogue.value);
-        console.log(fourthdialogue.value);
 
         const mainResult = document.getElementById("main-result");
         mainResult.innerHTML = '';
